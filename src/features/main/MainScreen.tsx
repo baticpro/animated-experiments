@@ -1,10 +1,18 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {FC} from 'react';
+import {View} from 'react-native';
+import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParamList} from '../../Navigator';
+import FeatureButton from './ui/FeatureButton';
 
-const MainScreen = () => {
+type Props = StackScreenProps<RootStackParamList, 'Main'>;
+
+const MainScreen: FC<Props> = ({navigation}) => {
   return (
     <View>
-      <Text>{'hello main screen'}</Text>
+      <FeatureButton
+        title={'Transition 1'}
+        onPress={() => navigation.navigate('FirstTransition')}
+      />
     </View>
   );
 };
