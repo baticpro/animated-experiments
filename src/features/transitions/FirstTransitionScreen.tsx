@@ -45,11 +45,12 @@ const FirstTransitionScreen: FC<Props> = () => {
   const clock = useClock();
 
   const startTime = useValue(0);
+  const endTime = add(startTime, duration);
+
   const from = useValue(0);
   const to = useValue(0);
 
   const startAnimation = new Value(1);
-  const endTime = add(startTime, duration);
 
   const opacity = interpolate(clock, {
     inputRange: [startTime, endTime],
