@@ -4,11 +4,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import MainScreen from './features/main/MainScreen';
 import FirstTransitionScreen from './features/transitions/FirstTransitionScreen';
 import SecondTransitionScreen from './features/transitions/SecondTransitionScreen';
+import ThirdTransitionScreen from './features/transitions/ThirdTransitionScreen';
 
 export type RootStackParamList = {
   Main: undefined;
   FirstTransition: undefined;
   SecondTransition: undefined;
+  ThirdTransition: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -24,6 +26,10 @@ export const Navigator = () => (
       <RootStack.Screen
         name={'SecondTransition'}
         component={SecondTransitionScreen}
+      />
+      <RootStack.Screen
+        name={'ThirdTransition'}
+        component={ThirdTransitionScreen}
       />
     </RootStack.Navigator>
   </NavigationContainer>
