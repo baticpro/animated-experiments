@@ -6,6 +6,7 @@ import FirstTransitionScreen from './features/transitions/FirstTransitionScreen'
 import SecondTransitionScreen from './features/transitions/SecondTransitionScreen';
 import ThirdTransitionScreen from './features/transitions/ThirdTransitionScreen';
 import FourthTransitionScreen from './features/transitions/FourthTransitionScreen';
+import PreloaderScreen from './features/timings/preloader/PreloaderScreen';
 
 export type RootStackParamList = {
   Main: undefined;
@@ -13,6 +14,7 @@ export type RootStackParamList = {
   SecondTransition: undefined;
   ThirdTransition: undefined;
   FourthTransition: undefined;
+  Preloader: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -37,6 +39,7 @@ export const Navigator = () => (
         name={'FourthTransition'}
         component={FourthTransitionScreen}
       />
+      <RootStack.Screen name={'Preloader'} component={PreloaderScreen} />
     </RootStack.Navigator>
   </NavigationContainer>
 );

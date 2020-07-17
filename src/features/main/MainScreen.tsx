@@ -25,6 +25,10 @@ const MainScreen: FC<Props> = ({navigation}) => {
         title={'Transition 4'}
         onPress={() => navigation.navigate('FourthTransition')}
       />
+      <FeatureButton
+        title={'Dots Preloader'}
+        onPress={() => navigation.navigate('Preloader')}
+      />
     </View>
   );
 };
