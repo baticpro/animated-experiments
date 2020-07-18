@@ -10,6 +10,14 @@ const MainScreen: FC<Props> = ({navigation}) => {
   return (
     <View>
       <FeatureButton
+        title={'Dots Preloader'}
+        onPress={() => navigation.navigate('Preloader')}
+      />
+      <FeatureButton
+        title={"Drag'n Drop"}
+        onPress={() => navigation.navigate('DragNdrop')}
+      />
+      <FeatureButton
         title={'Transition 1'}
         onPress={() => navigation.navigate('FirstTransition')}
       />
@@ -24,10 +32,6 @@ const MainScreen: FC<Props> = ({navigation}) => {
       <FeatureButton
         title={'Transition 4'}
         onPress={() => navigation.navigate('FourthTransition')}
-      />
-      <FeatureButton
-        title={'Dots Preloader'}
-        onPress={() => navigation.navigate('Preloader')}
       />
     </View>
   );
