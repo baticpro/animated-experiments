@@ -10,6 +10,10 @@ const MainScreen: FC<Props> = ({navigation}) => {
   return (
     <View>
       <FeatureButton
+        title={"Drag'n Decay"}
+        onPress={() => navigation.navigate('DragDecay')}
+      />
+      <FeatureButton
         title={'Dots Preloader'}
         onPress={() => navigation.navigate('Preloader')}
       />

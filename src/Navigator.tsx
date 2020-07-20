@@ -8,6 +8,7 @@ import ThirdTransitionScreen from './features/transitions/ThirdTransitionScreen'
 import FourthTransitionScreen from './features/transitions/FourthTransitionScreen';
 import PreloaderScreen from './features/timings/preloader/PreloaderScreen';
 import DragNdropScreen from './features/gesture/dragNdrop/DragNdropScreen';
+import DragDecayScreen from './features/gesture/dragDecay/DragDecayScreen';
 
 export type RootStackParamList = {
   Main: undefined;
@@ -17,6 +18,7 @@ export type RootStackParamList = {
   FourthTransition: undefined;
   Preloader: undefined;
   DragNdrop: undefined;
+  DragDecay: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -43,6 +45,7 @@ export const Navigator = () => (
       />
       <RootStack.Screen name={'Preloader'} component={PreloaderScreen} />
       <RootStack.Screen name={'DragNdrop'} component={DragNdropScreen} />
+      <RootStack.Screen name={'DragDecay'} component={DragDecayScreen} />
     </RootStack.Navigator>
   </NavigationContainer>
 );
